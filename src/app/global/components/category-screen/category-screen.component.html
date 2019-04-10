@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row" *ngFor="let cat of categories; index as i">
       <div class="col-sm">
-        <img src="/assets/{{cat.image}}">
+        <img src="assets/{{cat.image}}">
         <a style="background-color: blue; color: white" [routerLink]="['/detail-screen-component']" [queryParams]="{ location: location, branch: branch, name: cat.name }">{{cat.name}}</a>
       </div>
     </div>
