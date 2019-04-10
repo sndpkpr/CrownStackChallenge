@@ -1,11 +1,18 @@
-<!-- <p>
-  category-screen works!
-</p> -->
 <div class="container">
-    <div class="row" *ngFor="let cat of categories; index as i">
-      <div class="col-sm">
-        <img src="assets/{{cat.image}}">
-        <a style="background-color: blue; color: white" [routerLink]="['/detail-screen-component']" [queryParams]="{ location: location, branch: branch, name: cat.name }">{{cat.name}}</a>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let cat of categories; index as i">
+      <div class="card mb-4 box-shadow">
+        <div class="card-body">
+          <p class="card-text">
+            <img src="assets/{{cat.image}}">
+          </p>
+          <div style="background-color: blue; color: white; cursor: pointer" class="d-flex justify-content-between align-items-center" [routerLink]="['/detail-screen-component']" [queryParams]="{ location: location, branch: branch, name: cat.name }">
+            <div class="btn-group" style="padding: 10px">
+              <a style="color: white; font-size: 12px">{{cat.name}}</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </div>

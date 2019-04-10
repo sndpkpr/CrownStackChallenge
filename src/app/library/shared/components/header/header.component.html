@@ -1,9 +1,18 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">
+    <h1>Rental Management System</h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <p-tieredMenu #menu [popup]="true" [model]="location"></p-tieredMenu>
+        <button class="nav-link dropdown-toggle" type="button" pButton icon="fa fa-fw fa-list" label="Show" (click)="menu.toggle($event)">Select Location</button>
+      </li>
+    </ul>
   </div>
-  <div class="navbar-header">
-      <a class="navbar-brand" href="#">Rental Management System</a>
-  </div>
-  <p-tieredMenu #menu [popup]="true" [model]="location"></p-tieredMenu>
-  <button type="button" pButton icon="fa fa-fw fa-list" label="Show" (click)="menu.toggle($event)">Select Location</button>
 </nav>
