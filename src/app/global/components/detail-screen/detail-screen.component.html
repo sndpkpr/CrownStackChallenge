@@ -1,0 +1,11 @@
+<!-- <p>
+  detail-screen works!
+</p> -->
+<div class="container">
+    <div class="row" *ngFor="let cat of subCategories; index as i">
+      <div class="col-sm">
+        <img src="/assets/subcategory/{{cat.image}}">
+        <a style="background-color: blue; color: white" href="javascript:void(0)">{{cat.name}}</a>
+      </div>
+    </div>
+</div>
